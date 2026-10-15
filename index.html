@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valdivia &amp; Cía. Estudio Jurídico</title>
+<meta name="description" content="Estudio jurídico con atención en todo Chile. Asesoría laboral y corporativa para empresas con honorario mensual fijo, y representación de personas en causas laborales, penales, civiles y de familia.">
+<meta property="og:title" content="Valdivia &amp; Cía. Estudio Jurídico">
+<meta property="og:description" content="Asesoría legal cercana y profesional para empresas y personas, en todo Chile.">
+<meta property="og:locale" content="es_CL">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: estructura de la web anterior (portada, dos servicios, quiénes somos, contacto) con la marca nueva; líneas de 3 px como en el logo */
+:root{
+  --bg:#FFFFFF; --bg-alt:#F3F4F6; --fg:#1F2D4A; --fg-soft:#4F5866; --line:#6B7380; --hair:#DDE0E4;
+  --band-bg:#1F2D4A; --band-fg:#E9ECF1; --band-soft:#A9B4C6;
+  --btn-bg:#1F2D4A; --btn-fg:#FFFFFF; --btn2-bg:#FFFFFF; --btn2-fg:#1F2D4A; --card:#FFFFFF;
+  --display:"Marcellus", "Cormorant Garamond", Georgia, serif;
+  --body:"Jost", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121A2B; --bg-alt:#18223A; --fg:#E6E9EE; --fg-soft:#AEB6C3; --line:#8F99A8; --hair:#2A3550;
+  --band-bg:#0C1322; --band-fg:#E6E9EE; --band-soft:#A9B4C6; --btn-bg:#C9CDD3; --btn-fg:#121A2B; --btn2-bg:#C9CDD3; --btn2-fg:#121A2B; --card:#18223A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121A2B; --bg-alt:#18223A; --fg:#E6E9EE; --fg-soft:#AEB6C3; --line:#8F99A8; --hair:#2A3550;
+  --band-bg:#0C1322; --band-fg:#E6E9EE; --band-soft:#A9B4C6; --btn-bg:#C9CDD3; --btn-fg:#121A2B; --btn2-bg:#C9CDD3; --btn2-fg:#121A2B; --card:#18223A; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:.02em}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15}
+h2{font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.2}
+h3{font-size:1.45rem;line-height:1.3}
+p{margin:0}
+a{color:inherit}
+.eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.rule{width:56px;height:3px;background:var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;background:var(--btn-bg);color:var(--btn-fg);text-decoration:none;font-weight:500;letter-spacing:.06em;border:0;border-radius:2px;font-family:var(--body);font-size:.95rem;cursor:pointer}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--line);outline-offset:3px}
+
+header{position:sticky;top:env(safe-area-inset-top, 0px);background:var(--bg);border-bottom:1px solid var(--hair);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--fg)}
+.logo .mono{width:44px;height:44px;border:2px solid var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:19px;letter-spacing:1px}
+.logo .bar{width:3px;height:44px;background:var(--line)}
+.logo .name{display:block;font-family:var(--display);font-size:20px;letter-spacing:.12em;line-height:1}
+.logo .sub{display:block;font-size:9.5px;letter-spacing:.42em;color:var(--fg-soft);margin-top:6px}
+nav{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-soft)}
+nav a:hover{color:var(--fg)}
+
+.hero{background:var(--band-bg);color:var(--band-fg)}
+.hero .wrap{padding-block:clamp(64px,10vw,120px);display:grid;gap:22px;justify-items:start}
+.hero .eyebrow{color:var(--band-soft)}
+.hero p.lead{font-size:1.15rem;color:var(--band-soft);max-width:52ch}
+.hero .rule{background:var(--band-soft)}
+.hero .btn{background:var(--btn2-bg);color:var(--btn2-fg);margin-top:8px}
+
+section{padding-block:clamp(56px,8vw,88px)}
+.alt{background:var(--bg-alt)}
+.head{display:grid;gap:14px;justify-items:center;text-align:center;margin-bottom:40px}
+.head p{color:var(--fg-soft);max-width:56ch}
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--hair);border-top:3px solid var(--line);border-radius:2px;padding:32px 30px;display:grid;gap:14px;align-content:start}
+.card p{color:var(--fg-soft)}
+.card ul{margin:0;padding-left:18px;color:var(--fg-soft);display:grid;gap:4px}
+
+.about{display:grid;gap:16px;justify-items:center;text-align:center;max-width:680px;margin:0 auto}
+.about p{color:var(--fg-soft)}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px}
+.info{display:grid;gap:20px;align-content:start}
+.info .k{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-soft)}
+.info .v{font-family:var(--display);font-size:1.2rem;user-select:all}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+form .full{grid-column:1/-1}
+label{display:grid;gap:6px;font-size:.85rem;letter-spacing:.04em;color:var(--fg-soft)}
+input,textarea{font:inherit;font-size:1rem;color:var(--fg);background:var(--card);border:1px solid var(--hair);border-radius:2px;padding:12px 14px;min-height:48px;box-sizing:border-box;width:100%}
+textarea{min-height:120px;resize:vertical}
+.sent{grid-column:1/-1;color:var(--fg-soft);font-size:.95rem}
+
+footer{background:var(--band-bg);color:var(--band-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:26px;font-size:.85rem}
+
+@media (max-width:820px){
+  .services,.contact{grid-template-columns:minmax(0,1fr)}
+  nav{gap:16px}
+}
+@media (max-width:480px){
+  form{grid-template-columns:minmax(0,1fr)}
+  .logo .name{font-size:16px}
+  nav a{font-size:.78rem;letter-spacing:.08em}
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Valdivia &amp; Cía. Estudio Jurídico, inicio">
+      <span class="mono" aria-hidden="true">VC</span>
+      <span class="bar" aria-hidden="true"></span>
+      <span><span class="name">VALDIVIA &amp; CÍA.</span><span class="sub">ESTUDIO JURÍDICO</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Quiénes somos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Estudio jurídico · Atención en todo Chile</p>
+      <h1>Asesoría legal cercana y profesional para empresas y personas.</h1>
+      <div class="rule"></div>
+      <p class="lead">Laboral, corporativo, penal, civil y familia.</p>
+      <a class="btn" href="#contacto">Agendar una reunión</a>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <h2>Nuestros servicios</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="services">
+        <article class="card">
+          <h3>Asesoría a empresas</h3>
+          <p>Asesoría permanente con honorario mensual fijo.</p>
+          <ul>
+            <li>Derecho laboral y Ley Karin</li>
+            <li>Sociedades y contratos</li>
+            <li>Cobranza judicial y extrajudicial</li>
+            <li>Querellas por estafa y delitos económicos</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Asesoría a personas</h3>
+          <p>Representación en juicios y trámites.</p>
+          <ul>
+            <li>Despidos y causas laborales</li>
+            <li>Querellas penales</li>
+            <li>Divorcios y pensión de alimentos</li>
+            <li>Contratos, arriendos y posesiones efectivas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="alt">
+    <div class="about wrap">
+      <h2>Quiénes somos</h2>
+      <div class="rule"></div>
+      <p>Valdivia &amp; Cía. es un estudio jurídico fundado y dirigido por la abogada Yamilet Retamal Valdivia, con más de 10 años de experiencia en tribunales.</p>
+      <p>Asesoramos a empresas en derecho laboral y representamos a empresas y personas en causas laborales, penales, civiles y de familia. Trabajamos con honorarios claros desde el inicio, mantenemos a cada cliente informado de su caso y atendemos en todo Chile, de forma presencial en Santiago y en línea.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap contact">
+      <div class="info">
+        <div style="display:grid;gap:14px">
+          <h2>Contacto</h2>
+          <div class="rule"></div>
+        </div>
+        <div><p class="k">WhatsApp</p><p class="v">+56 9 7293 0546</p></div>
+        <div><p class="k">Correo</p><p class="v">contacto@rvaldiviaabogados.cl</p></div>
+        <div><p class="k">Oficina</p><p class="v">San Sebastián 2750, Of. 603, Las Condes, Santiago</p></div>
+        <div><p class="k">Cobertura</p><p class="v">Atención presencial y en línea en todo Chile</p></div>
+      </div>
+      <form id="form-contacto" name="contacto" method="POST" data-netlify="true" netlify-honeypot="empresa-web" action="/gracias.html">
+        <input type="hidden" name="form-name" value="contacto">
+        <p hidden><label>No completar <input name="empresa-web"></label></p>
+        <label for="f-nombre">Nombre<input id="f-nombre" name="nombre" autocomplete="name" required></label>
+        <label for="f-correo">Correo<input id="f-correo" name="correo" type="email" autocomplete="email" required></label>
+        <label class="full" for="f-fono">Teléfono<input id="f-fono" name="telefono" type="tel" autocomplete="tel"></label>
+        <label class="full" for="f-msg">Mensaje<textarea id="f-msg" name="mensaje"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Enviar</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Valdivia &amp; Cía. Estudio Jurídico</span>
+    <span>Lunes a jueves 9:00 a 17:30 · viernes 9:00 a 14:00</span>
+  </div>
+</footer>
+</body>
+</html>
